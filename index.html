@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter-sign-up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="emailform">
+    <h1>Stay updated!</h1>
+    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    <ul>
+      <li>Product discovery and building what matters </li>
+      <li>Measuring to ensure updates are a success</li>
+      <li>And much more!</li>
+    </ul>
+    <div class="emailcontainer">
+      <div class="email-label">
+        <label for="emailid">Email address</label> <span style="display: none;" id="errmsg">Valid email required</span>
+      </div>
+      <input type="text" class="" id="emailinput" placeholder="email@gmail.com">
+      <button class="sub-btn" onclick="submit()">Subscribe to monthly newsletter</button>
+    </div>
+  </div>
+  <div class="image"></div>
+
+
+</div>
+
+<div class="modal" id="myModal" >
+  <div class="modal-content">
+    <!-- <span class="close">&times;</span> -->
+    <img style="width: 100px;" src="assets/images/icon-success.svg" alt="">
+    <h1>Thanks for Subscribing!</h1>
+    <p>A confirmation email has been sent to xxx@gmail.com. Please open it and click the button inside to confirm your subscription</p>
+    <button class="dismissbtn">Dismiss message</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

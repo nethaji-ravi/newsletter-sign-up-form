@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+button ,input:hover{
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(to right,rgb(226, 99, 120),hsl(4, 100%, 67%));
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: hsl(235, 18%, 26%);
+}
+.container {
+  min-width: 750px;
+  min-height: 500px;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  padding: 3em;
+  border-radius: 1.5em;
+}
+.emailform {
+  width: 60%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+h1 {
+  font-size: 3em;
+}
+.emailform p {
+  margin-top: 1em;
+}
+.image {
+  width: 40%;
+  background-image: url(assets/images/illustration-sign-up-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  border-radius: 1em;
+}
+.emailcontainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 1.5em;
+}
+.sub-btn {
+  color: hsl(0, 0%, 100%);
+  background: hsl(234, 29%, 20%);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+ul li {
+  list-style: none;
+}
+ul li {
+  padding-left: 20px;
+  background-image: url("assets/images/icon-list.svg"); /* Set SVG icon as background */
+  background-repeat: no-repeat;
+  background-position: left top;
+  margin-top: 15px;
+  background-size: 16px;
+}
+#emailinput {
+  border: 2px solid #ced4da;
+  transition: border-color 0.3s ease;
+  border-radius: 3px;
+  outline: none;
+  padding: 10px;
+}
+#emailinput:focus {
+  border-color: #7bb0e9; 
+}
+label{
+    font-weight: bold;
+    font-size:.8em
+}
+.email-label{
+    display: flex;
+    justify-content: space-between;
+}
+.email-label span{
+    color: red;
+    font-size:.7em
+}
+#emailinput.error{
+    background: #f8d8d8;
+    color: rgb(220, 79, 79);
+    border: 2px solid red;
+    border-color: red;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 3em;
+    border: 1px solid #888;
+    width: 600px;
+    height:400px;
+    border-radius: 1.5em;
+  }
+  .dismissbtn{
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: .5em;
+    background:  hsl(234, 29%, 20%);
+  }
+@media(max-width:650px){
+    .container{
+        width:100vw;
+        flex-direction: column-reverse;
+        min-width: 100px;
+        padding:0;
+        border-radius: 0;
+    }
+    .emailform{
+        width:100%;
+        padding:1em;
+    }
+    .image{
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        width: 100%;
+        height: 40vh;
+        border-radius: 0 0 1em 1em ;
+    }
+    h1 {
+        font-size: 2.5em;
+      }
+      .modal-content{
+        width: 100vw;
+        height: 100vh;
+        border-radius:0;
+      }
+}
